@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mariia Solovei - CV</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    :root {
+      --ink: #050505;
+      --blue: #173f5d;
+      --paper: #ffffff;
+      --page-w: 210mm;
+      --page-h: 297mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: #f3f3f3;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .page {
+      width: var(--page-w);
+      min-height: var(--page-h);
+      background: var(--paper);
+      display: grid;
+      grid-template-columns: 60mm 1fr;
+      column-gap: 21mm;
+      padding: 10mm 12mm 10mm 12mm;
+      box-shadow: 0 2px 18px rgba(0, 0, 0, 0.14);
+    }
+
+    .sidebar {
+      background: var(--blue);
+      color: #fff;
+      min-height: calc(var(--page-h) - 20mm);
+      padding: 18mm 7.3mm 10mm;
+    }
+
+    .name {
+      margin: 0 0 26mm;
+      font-size: 21pt;
+      line-height: 1.42;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .side-section {
+      margin: 0 0 8mm;
+    }
+
+    .side-section h2 {
+      margin: 0 0 7mm;
+      font-size: 12.4pt;
+      line-height: 1.1;
+      letter-spacing: 0.045em;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .side-section p,
+    .side-section li {
+      margin: 0;
+      font-size: 10.7pt;
+      line-height: 1.18;
+    }
+
+    .side-section .spaced {
+      margin-top: 9mm;
+    }
+
+    .side-section .note {
+      margin-top: 1.5mm;
+      font-size: 8.8pt;
+      line-height: 1.08;
+    }
+
+    .side-list {
+      list-style: none;
+      padding: 0;
+      margin: 6mm 0 0;
+    }
+
+    .side-list li {
+      margin-bottom: 4.2mm;
+    }
+
+    .content {
+      padding-top: 12mm;
+    }
+
+    .cv-title {
+      margin: 0 0 12mm;
+      color: var(--blue);
+      font-size: 28pt;
+      line-height: 1;
+      letter-spacing: 0.07em;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .section {
+      margin: 0 0 9mm;
+    }
+
+    .section h2 {
+      margin: 0 0 7mm;
+      color: var(--blue);
+      font-size: 14.8pt;
+      line-height: 1;
+      letter-spacing: 0.075em;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .entry {
+      position: relative;
+      margin: 0 0 5.4mm;
+      padding-left: 5.2mm;
+    }
+
+    .entry::before {
+      content: "-";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 12.5pt;
+      line-height: 1.16;
+    }
+
+    .entry p {
+      margin: 0;
+      font-size: 11.4pt;
+      line-height: 1.17;
+    }
+
+    .entry .lead {
+      font-size: 12.8pt;
+      line-height: 1.16;
+    }
+
+    .entry .indent {
+      margin-top: 2.2mm;
+      padding-left: 4.3mm;
+      font-size: 12.1pt;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .compact {
+      margin-bottom: 3.8mm;
+    }
+
+    .awards .entry {
+      margin-bottom: 5.6mm;
+    }
+
+    @media print {
+      html,
+      body {
+        width: var(--page-w);
+        height: var(--page-h);
+        background: #fff;
+        padding: 0;
+      }
+
+      body {
+        display: block;
+      }
+
+      .page {
+        width: var(--page-w);
+        height: var(--page-h);
+        min-height: 0;
+        box-shadow: none;
+        overflow: hidden;
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+    }
+
+    @media screen and (max-width: 820px) {
+      body {
+        padding: 0;
+        background: var(--paper);
+      }
+
+      .page {
+        width: 100%;
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+
+      .sidebar {
+        min-height: auto;
+        padding: 32px 28px;
+      }
+
+      .name {
+        margin-bottom: 28px;
+      }
+
+      .content {
+        padding: 30px 28px 42px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page" aria-label="Lebenslauf Mariia Solovei">
+    <aside class="sidebar">
+      <h1 class="name">Mariia<br>Solovei</h1>
+
+      <section class="side-section">
+        <h2>Persönliche Daten</h2>
+        <p>05.11.2008</p>
+        <p>Aachen, Deutschland</p>
+        <p>msoloveia1@gmail.com</p>
+        <p class="spaced">github.com/meosn</p>
+        <p class="note">Ausgewählte Projekte und<br>Quellcodes verfügbar.</p>
+      </section>
+
+      <section class="side-section">
+        <h2>Sprachen</h2>
+        <p>Deutsch</p>
+        <p>- TestDaF 4/4/4/5</p>
+        <p class="spaced">Englisch</p>
+        <p>- IELTS 7.5</p>
+        <p class="spaced">Russisch</p>
+        <p>- Muttersprache</p>
+      </section>
+
+      <section class="side-section">
+        <h2>IT-Kenntnisse</h2>
+        <ul class="side-list">
+          <li>- Python</li>
+          <li>- C++</li>
+          <li>- SQL</li>
+          <li>- JavaScript/TypeScript</li>
+          <li>- React Native</li>
+          <li>- FastAPI</li>
+          <li>- Machine Learning</li>
+          <li>- Data Science</li>
+        </ul>
+      </section>
+    </aside>
+
+    <section class="content">
+      <h2 class="cv-title">CV</h2>
+
+      <section class="section">
+        <h2>Ausbildung</h2>
+        <div class="entry">
+          <p class="lead">RWTH Aachen University</p>
+          <p class="indent">B.Sc. Informatik</p>
+          <p class="indent">seit Wintersemester 2026/27</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Projekte</h2>
+        <div class="entry">
+          <p class="lead">Backgammon-Multiplayer-App (kommerzielles Projekt)</p>
+          <p>Entwicklung einer plattformübergreifenden Backgammon-App mit Online-Multiplayer, serverseitiger Spiellogik und integrierter Zahlungsfunktion.</p>
+        </div>
+
+        <div class="entry">
+          <p class="lead">Messenger-App (kommerzielles Projekt)</p>
+          <p><a href="https://github.com/meosn/messenger">https://github.com/meosn/messenger</a></p>
+          <p>Entwicklung einer plattformübergreifenden Messenger-Anwendung mit React Native, Benutzerkonten und Echtzeit-Kommunikation.</p>
+        </div>
+
+        <div class="entry">
+          <p class="lead">AIReader (privates iOS-Projekt)</p>
+          <p><a href="https://github.com/meosn/book">https://github.com/meosn/book</a></p>
+          <p>Entwicklung einer SwiftUI-App zum Importieren von PDF-Büchern, seitenweisen Übersetzen mit Google Gemini und Exportieren der übersetzten Ausgabe als PDF.</p>
+        </div>
+
+        <div class="entry">
+          <p class="lead">Neural Network from Scratch (Privatprojekt).</p>
+          <p><a href="https://github.com/meosn/NN_OnlyWithRandom">https://github.com/meosn/NN_OnlyWithRandom</a></p>
+          <p>Implementierung einer neuronalen Netzes ohne externe ML-Frameworks oder Bibliotheken, inklusive eigener Trainingslogik und Backpropagation.</p>
+        </div>
+
+        <div class="entry compact">
+          <p class="lead">Kundenabwanderungsvorhersage im Sber-ML-Wettbewerb.</p>
+          <p><a href="https://github.com/meosn/ML">https://github.com/meosn/ML</a></p>
+          <p>Entwicklung eines Tabular-ML-Modells mit Feature Engineering und Soft-Voting-Ensemble; erzielter Weighted F1-Score: 85 %.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Praktische Erfahrung</h2>
+        <div class="entry">
+          <p>Mitarbeit an kommerziellen Softwareprojekten (Backend-Entwicklung, API-Design, SQL-Datenbanken und Zahlungsintegration).</p>
+        </div>
+      </section>
+
+      <section class="section awards">
+        <h2>Auszeichnungen &amp; Engagement</h2>
+        <div class="entry">
+          <p>Preisträgerin des IX Moscow Young Physicists Tournament (NRNU MEPHI, 2023)</p>
+        </div>
+        <div class="entry">
+          <p>2. Platz bei der Individual Physics Olympiad (2024)</p>
+        </div>
+        <div class="entry">
+          <p>Teilnahme an IT- und Informatik-Olympiaden</p>
+        </div>
+        <div class="entry">
+          <p>Mehr als 250 Stunden ehrenamtliche Tätigkeit</p>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
