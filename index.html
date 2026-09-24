@@ -3,341 +3,156 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mariia Solovei - CV</title>
+  <meta name="description" content="Lebenslauf von Mariia Solovei – Informatikstudentin und Software Developerin">
+  <title>Mariia Solovei – Curriculum Vitae</title>
   <style>
-    @page {
-      size: A4;
-      margin: 0;
-    }
-
-    :root {
-      --ink: #050505;
-      --blue: #173f5d;
-      --paper: #ffffff;
-      --page-w: 210mm;
-      --page-h: 297mm;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      margin: 0;
-      min-height: 100%;
-      background: #f3f3f3;
-      color: var(--ink);
-      font-family: Georgia, "Times New Roman", serif;
-    }
-
-    body {
-      display: flex;
-      justify-content: center;
-      padding: 16px;
-    }
-
-    .page {
-      width: var(--page-w);
-      min-height: var(--page-h);
-      background: var(--paper);
-      display: grid;
-      grid-template-columns: 60mm 1fr;
-      column-gap: 21mm;
-      padding: 10mm 12mm 10mm 12mm;
-      box-shadow: 0 2px 18px rgba(0, 0, 0, 0.14);
-    }
-
-    .sidebar {
-      background: var(--blue);
-      color: #fff;
-      min-height: calc(var(--page-h) - 20mm);
-      padding: 18mm 7.3mm 10mm;
-    }
-
-    .name {
-      margin: 0 0 26mm;
-      font-size: 21pt;
-      line-height: 1.42;
-      letter-spacing: 0.06em;
-      font-weight: 700;
-      text-transform: uppercase;
-      text-align: center;
-    }
-
-    .side-section {
-      margin: 0 0 8mm;
-    }
-
-    .side-section h2 {
-      margin: 0 0 7mm;
-      font-size: 12.4pt;
-      line-height: 1.1;
-      letter-spacing: 0.045em;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    .side-section p,
-    .side-section li {
-      margin: 0;
-      font-size: 10.7pt;
-      line-height: 1.18;
-    }
-
-    .side-section .spaced {
-      margin-top: 9mm;
-    }
-
-    .side-section .note {
-      margin-top: 1.5mm;
-      font-size: 8.8pt;
-      line-height: 1.08;
-    }
-
-    .side-list {
-      list-style: none;
-      padding: 0;
-      margin: 6mm 0 0;
-    }
-
-    .side-list li {
-      margin-bottom: 4.2mm;
-    }
-
-    .content {
-      padding-top: 12mm;
-    }
-
-    .cv-title {
-      margin: 0 0 12mm;
-      color: var(--blue);
-      font-size: 28pt;
-      line-height: 1;
-      letter-spacing: 0.07em;
-      font-weight: 400;
-      text-transform: uppercase;
-    }
-
-    .section {
-      margin: 0 0 9mm;
-    }
-
-    .section h2 {
-      margin: 0 0 7mm;
-      color: var(--blue);
-      font-size: 14.8pt;
-      line-height: 1;
-      letter-spacing: 0.075em;
-      font-weight: 400;
-      text-transform: uppercase;
-    }
-
-    .entry {
-      position: relative;
-      margin: 0 0 5.4mm;
-      padding-left: 5.2mm;
-    }
-
-    .entry::before {
-      content: "-";
-      position: absolute;
-      left: 0;
-      top: 0;
-      font-size: 12.5pt;
-      line-height: 1.16;
-    }
-
-    .entry p {
-      margin: 0;
-      font-size: 11.4pt;
-      line-height: 1.17;
-    }
-
-    .entry .lead {
-      font-size: 12.8pt;
-      line-height: 1.16;
-    }
-
-    .entry .indent {
-      margin-top: 2.2mm;
-      padding-left: 4.3mm;
-      font-size: 12.1pt;
-    }
-
-    a {
-      color: var(--blue);
-      text-decoration: none;
-    }
-
-    .compact {
-      margin-bottom: 3.8mm;
-    }
-
-    .awards .entry {
-      margin-bottom: 5.6mm;
-    }
-
-    @media print {
-      html,
-      body {
-        width: var(--page-w);
-        height: var(--page-h);
-        background: #fff;
-        padding: 0;
-      }
-
-      body {
-        display: block;
-      }
-
-      .page {
-        width: var(--page-w);
-        height: var(--page-h);
-        min-height: 0;
-        box-shadow: none;
-        overflow: hidden;
-        break-after: avoid;
-        page-break-after: avoid;
-      }
-    }
-
-    @media screen and (max-width: 820px) {
-      body {
-        padding: 0;
-        background: var(--paper);
-      }
-
-      .page {
-        width: 100%;
-        min-height: auto;
-        grid-template-columns: 1fr;
-        gap: 0;
-        padding: 0;
-        box-shadow: none;
-      }
-
-      .sidebar {
-        min-height: auto;
-        padding: 32px 28px;
-      }
-
-      .name {
-        margin-bottom: 28px;
-      }
-
-      .content {
-        padding: 30px 28px 42px;
-      }
-    }
+    :root{--ink:#172033;--muted:#5d687b;--line:#dce2ea;--accent:#2457c5;--soft:#f3f6fb;--page:#fff}
+    *{box-sizing:border-box}
+    html{background:#e9edf3}
+    body{margin:0;color:var(--ink);background:var(--page);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:10.4pt;line-height:1.48;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .page{max-width:210mm;margin:22px auto;background:#fff;padding:17mm 17mm 16mm;box-shadow:0 8px 35px rgba(23,32,51,.12)}
+    header{border-bottom:2px solid var(--ink);padding-bottom:17px;margin-bottom:22px}
+    .header-grid{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:end}
+    h1{font-size:31pt;line-height:1.04;letter-spacing:-.04em;margin:0 0 7px;font-weight:780}
+    .role{font-size:13pt;color:var(--accent);font-weight:650;letter-spacing:.01em}
+    .contact{display:grid;grid-template-columns:auto auto;gap:5px 18px;text-align:right;font-size:9.2pt;color:var(--muted)}
+    a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(36,87,197,.32)}
+    .contact a{color:var(--accent)}
+    .intro{margin:17px 0 0;max-width:850px;font-size:11.3pt;line-height:1.55;color:#27344b}
+    main{display:grid;grid-template-columns:minmax(0,1fr) 61mm;gap:28px}
+    section{margin-bottom:25px}
+    h2{font-size:10.4pt;text-transform:uppercase;letter-spacing:.13em;color:var(--accent);margin:0 0 12px;padding-bottom:6px;border-bottom:1px solid var(--line);font-weight:780}
+    h3{font-size:12.2pt;line-height:1.25;margin:0;font-weight:760}
+    .item{margin-bottom:20px;break-inside:avoid}
+    .item:last-child{margin-bottom:0}
+    .meta{display:flex;justify-content:space-between;gap:14px;margin:4px 0 8px;color:var(--muted);font-size:9.4pt}
+    .meta strong{font-weight:650;color:#3f4c61}
+    p{margin:0 0 8px}
+    ul{margin:7px 0 0;padding-left:18px}
+    li{margin:4px 0;padding-left:2px}
+    .project-title{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+    .project-title a{font-size:9.3pt;color:var(--accent);white-space:nowrap}
+    .taglist{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+    .tag{background:var(--soft);border:1px solid #e3e9f3;border-radius:4px;padding:3px 7px;font-size:8.8pt;color:#30415e;line-height:1.2}
+    .side-block{margin-bottom:24px;break-inside:avoid}
+    .side-block h2{margin-bottom:10px}
+    .skill-group{margin-bottom:12px}
+    .skill-group:last-child{margin-bottom:0}
+    .skill-group strong{display:block;font-size:9.5pt;margin-bottom:4px}
+    .skill-group p{color:var(--muted);font-size:9.5pt;line-height:1.55}
+    .language{display:grid;grid-template-columns:1fr auto;gap:10px;padding:5px 0;border-bottom:1px solid var(--line);font-size:9.6pt}
+    .language:last-child{border-bottom:0}
+    .language span:last-child{color:var(--muted);text-align:right}
+    .award{margin-bottom:12px;font-size:9.7pt}.award:last-child{margin-bottom:0}.award strong{display:block}.award span{color:var(--muted)}
+    footer{border-top:1px solid var(--line);margin-top:7px;padding-top:9px;color:var(--muted);font-size:8.6pt;display:flex;justify-content:space-between;gap:10px}
+    @media(max-width:800px){html{background:#fff}.page{margin:0;padding:28px 22px;box-shadow:none}.header-grid,main{grid-template-columns:1fr}.contact{text-align:left;grid-template-columns:1fr 1fr}.contact a{overflow-wrap:anywhere}.project-title{display:block}.project-title a{display:inline-block;margin-top:4px}.meta{display:block}.meta span{display:block;margin-top:2px}}
+    @media print{ @page{size:A4;margin:0} html,body{background:#fff}.page{max-width:none;margin:0;padding:15mm 16mm 14mm;box-shadow:none}a{border-bottom:0}h2{break-after:avoid}.item,.side-block{break-inside:avoid}section{orphans:3;widows:3} }
   </style>
 </head>
 <body>
-  <main class="page" aria-label="Lebenslauf Mariia Solovei">
-    <aside class="sidebar">
-      <h1 class="name">Mariia<br>Solovei</h1>
-
-      <section class="side-section">
-        <h2>Persönliche Daten</h2>
-        <p>05.11.2008</p>
-        <p>Aachen, Deutschland</p>
-        <p>msoloveia1@gmail.com</p>
-        <p class="spaced">github.com/meosn</p>
-        <p class="note">Ausgewählte Projekte und<br>Quellcodes verfügbar.</p>
-      </section>
-
-      <section class="side-section">
-        <h2>Sprachen</h2>
-        <p>Deutsch</p>
-        <p>- TestDaF 4/4/4/5</p>
-        <p class="spaced">Englisch</p>
-        <p>- IELTS 7.5</p>
-        <p class="spaced">Russisch</p>
-        <p>- Muttersprache</p>
-      </section>
-
-      <section class="side-section">
-        <h2>IT-Kenntnisse</h2>
-        <ul class="side-list">
-          <li>- Python</li>
-          <li>- C++</li>
-          <li>- SQL</li>
-          <li>- JavaScript/TypeScript</li>
-          <li>- React Native</li>
-          <li>- FastAPI</li>
-          <li>- Machine Learning</li>
-          <li>- Data Science</li>
-        </ul>
-      </section>
-    </aside>
-
-    <section class="content">
-      <h2 class="cv-title">CV</h2>
-
-      <section class="section">
-        <h2>Ausbildung</h2>
-        <div class="entry">
-          <p class="lead">RWTH Aachen University</p>
-          <p class="indent">B.Sc. Informatik</p>
-          <p class="indent">seit Wintersemester 2026/27</p>
+  <div class="page">
+    <header>
+      <div class="header-grid">
+        <div>
+          <h1>Mariia Solovei</h1>
+          <div class="role">Informatikstudentin · Software Development · AI &amp; Data</div>
         </div>
-      </section>
+        <div class="contact" aria-label="Kontakt">
+          <span>Aachen, Deutschland</span><span>+49 179 1731458</span>
+          <a href="mailto:msoloveial@gmail.com">msoloveial@gmail.com</a><span>Geb. 05.11.2008</span>
+          <a href="https://github.com/meosn">github.com/meosn</a>
+          <a href="https://www.linkedin.com/in/mariia-solovei-070804439/">LinkedIn-Profil</a>
+        </div>
+      </div>
+      <p class="intro">Informatikstudentin an der RWTH Aachen University mit kommerzieller Erfahrung in der Softwareentwicklung. Praktischer Schwerpunkt auf Backend- und API-Entwicklung, SQL-Datenbanken und Zahlungsintegration sowie auf Mobile Development, Machine Learning und Data Science. Arbeitet gerne an klar strukturierten, technisch anspruchsvollen Produkten – von eigener Serverlogik bis zu datengetriebenen Anwendungen.</p>
+    </header>
 
-      <section class="section">
-        <h2>Projekte</h2>
-        <div class="entry">
-          <p class="lead">Backgammon-Multiplayer-App (kommerzielles Projekt)</p>
-          <p>Entwicklung einer plattformübergreifenden Backgammon-App mit Online-Multiplayer, serverseitiger Spiellogik und integrierter Zahlungsfunktion.</p>
-        </div>
+    <main>
+      <div>
+        <section>
+          <h2>Berufserfahrung</h2>
+          <article class="item">
+            <h3>Software Developer · AppBusters</h3>
+            <div class="meta"><strong>01/2026 – 08/2026</strong><span>Softwareentwicklung</span></div>
+            <ul>
+              <li>Entwicklung und Weiterentwicklung von Softwarelösungen mit Schwerpunkt auf Backend-Komponenten.</li>
+              <li>Konzeption und Umsetzung von APIs für die Kommunikation zwischen Anwendungskomponenten.</li>
+              <li>Arbeit mit SQL-Datenbanken sowie strukturierter Datenhaltung.</li>
+              <li>Integration von Zahlungsfunktionen in Softwareprodukte.</li>
+            </ul>
+          </article>
+        </section>
 
-        <div class="entry">
-          <p class="lead">Messenger-App (kommerzielles Projekt)</p>
-          <p><a href="https://github.com/meosn/messenger">https://github.com/meosn/messenger</a></p>
-          <p>Entwicklung einer plattformübergreifenden Messenger-Anwendung mit React Native, Benutzerkonten und Echtzeit-Kommunikation.</p>
-        </div>
+        <section>
+          <h2>Ausbildung</h2>
+          <article class="item">
+            <h3>RWTH Aachen University</h3>
+            <div class="meta"><strong>B.Sc. Informatik · seit Wintersemester 2026/27</strong><span>Aachen, Deutschland</span></div>
+            <p>Studium der Informatik mit Fokus auf Softwareentwicklung, Algorithmen und datenorientierten Methoden.</p>
+          </article>
+        </section>
 
-        <div class="entry">
-          <p class="lead">AIReader (privates iOS-Projekt)</p>
-          <p><a href="https://github.com/meosn/book">https://github.com/meosn/book</a></p>
-          <p>Entwicklung einer SwiftUI-App zum Importieren von PDF-Büchern, seitenweisen Übersetzen mit Google Gemini und Exportieren der übersetzten Ausgabe als PDF.</p>
-        </div>
+        <section>
+          <h2>Ausgewählte Projekte</h2>
+          <article class="item">
+            <div class="project-title"><h3>Backgammon-Multiplayer-App</h3><span class="tag">Privates Projekt</span></div>
+            <p>Cross-Plattform-Anwendung für Backgammon mit Online-Multiplayer. Serverseitige Spiellogik und integrierte Zahlungsfunktion bilden die technische Grundlage für ein vollständiges, interaktives Produkt.</p>
+            <div class="taglist"><span class="tag">Cross-Platform</span><span class="tag">Online Multiplayer</span><span class="tag">Server-side Game Logic</span><span class="tag">Payment Integration</span></div>
+          </article>
+          <article class="item">
+            <div class="project-title"><h3>Messenger-App</h3><a href="https://github.com/meosn/messenger">GitHub: meosn/messenger ↗</a></div>
+            <p>Kommerziell entwickelte Cross-Plattform-Messenger-App mit Nutzerkonten und Echtzeitkommunikation. Das Projekt verbindet mobile Produktentwicklung mit einer auf verlässliche Kommunikation ausgelegten Anwendungslogik.</p>
+            <div class="taglist"><span class="tag">React Native</span><span class="tag">Cross-Platform</span><span class="tag">Accounts</span><span class="tag">Real-Time Communication</span></div>
+          </article>
+          <article class="item">
+            <div class="project-title"><h3>AIReader</h3><a href="https://github.com/meosn/book">GitHub: meosn/book ↗</a></div>
+            <p>SwiftUI-iOS-App zum Import von PDFs und zur seitenweisen Übersetzung mit Google Gemini. Übersetzte Inhalte können anschließend als PDF exportiert werden.</p>
+            <div class="taglist"><span class="tag">SwiftUI</span><span class="tag">iOS</span><span class="tag">PDF Import &amp; Export</span><span class="tag">Google Gemini</span></div>
+          </article>
+          <article class="item">
+            <div class="project-title"><h3>Neural Network from Scratch</h3><a href="https://github.com/meosn/NN_OnlyWithRandom">GitHub: meosn/NN_OnlyWithRandom ↗</a></div>
+            <p>Implementierung eines neuronalen Netzes ohne externe Machine-Learning-Frameworks oder -Bibliotheken. Trainingslogik und Backpropagation wurden eigenständig umgesetzt, um die zentralen Mechanismen neuronaler Netze nachvollziehbar abzubilden.</p>
+            <div class="taglist"><span class="tag">Neural Networks</span><span class="tag">Backpropagation</span><span class="tag">From Scratch</span></div>
+          </article>
+          <article class="item">
+            <div class="project-title"><h3>Sber ML Churn Prediction</h3><a href="https://github.com/meosn/ML">GitHub: meosn/ML ↗</a></div>
+            <p>Tabellarisches Machine-Learning-Projekt zur Churn Prediction mit Feature Engineering und einem Soft-Voting-Ensemble. Erreicht wurde ein Weighted-F1-Score von 85&nbsp;%.</p>
+            <div class="taglist"><span class="tag">Machine Learning</span><span class="tag">Data Science</span><span class="tag">Feature Engineering</span><span class="tag">Soft-Voting Ensemble</span></div>
+          </article>
+        </section>
+      </div>
 
-        <div class="entry">
-          <p class="lead">Neural Network from Scratch (Privatprojekt).</p>
-          <p><a href="https://github.com/meosn/NN_OnlyWithRandom">https://github.com/meosn/NN_OnlyWithRandom</a></p>
-          <p>Implementierung einer neuronalen Netzes ohne externe ML-Frameworks oder Bibliotheken, inklusive eigener Trainingslogik und Backpropagation.</p>
-        </div>
+      <aside>
+        <section class="side-block">
+          <h2>Technische Kenntnisse</h2>
+          <div class="skill-group"><strong>Programmiersprachen</strong><p>Python · C++ · SQL · JavaScript · TypeScript</p></div>
+          <div class="skill-group"><strong>Entwicklung</strong><p>React Native · FastAPI · SwiftUI</p></div>
+          <div class="skill-group"><strong>Fachgebiete</strong><p>Backend-Entwicklung · API-Design · Datenbanken · Zahlungsintegration · Mobile Development · Machine Learning · Data Science</p></div>
+        </section>
 
-        <div class="entry compact">
-          <p class="lead">Kundenabwanderungsvorhersage im Sber-ML-Wettbewerb.</p>
-          <p><a href="https://github.com/meosn/ML">https://github.com/meosn/ML</a></p>
-          <p>Entwicklung eines Tabular-ML-Modells mit Feature Engineering und Soft-Voting-Ensemble; erzielter Weighted F1-Score: 85 %.</p>
-        </div>
-      </section>
+        <section class="side-block">
+          <h2>Sprachen</h2>
+          <div class="language"><span>Russisch</span><span>Muttersprache</span></div>
+          <div class="language"><span>Deutsch</span><span>TestDaF 4/4/4/5</span></div>
+          <div class="language"><span>Englisch</span><span>IELTS 7.5</span></div>
+        </section>
 
-      <section class="section">
-        <h2>Praktische Erfahrung</h2>
-        <div class="entry">
-          <p>Mitarbeit an kommerziellen Softwareprojekten (Backend-Entwicklung, API-Design, SQL-Datenbanken und Zahlungsintegration).</p>
-        </div>
-      </section>
+        <section class="side-block">
+          <h2>Auszeichnungen &amp; Engagement</h2>
+          <div class="award"><strong>Preisträgerin</strong><span>IX Moscow Young Physicists Tournament, NRNU MEPhI · 2023</span></div>
+          <div class="award"><strong>2. Platz</strong><span>Individual Physics Olympiad · 2024</span></div>
+          <div class="award"><strong>Teilnahme und Erfolge</strong><span>IT- und Informatik-Olympiaden</span></div>
+          <div class="award"><strong>250+ Stunden</strong><span>ehrenamtliches Engagement</span></div>
+        </section>
 
-      <section class="section awards">
-        <h2>Auszeichnungen &amp; Engagement</h2>
-        <div class="entry">
-          <p>Preisträgerin des IX Moscow Young Physicists Tournament (NRNU MEPHI, 2023)</p>
-        </div>
-        <div class="entry">
-          <p>2. Platz bei der Individual Physics Olympiad (2024)</p>
-        </div>
-        <div class="entry">
-          <p>Teilnahme an IT- und Informatik-Olympiaden</p>
-        </div>
-        <div class="entry">
-          <p>Mehr als 250 Stunden ehrenamtliche Tätigkeit</p>
-        </div>
-      </section>
-    </section>
-  </main>
+        <section class="side-block">
+          <h2>Online-Profile</h2>
+          <p><a href="https://github.com/meosn">github.com/meosn</a></p>
+          <p><a href="https://www.linkedin.com/in/mariia-solovei-070804439/">linkedin.com/in/mariia-solovei-070804439</a></p>
+        </section>
+      </aside>
+    </main>
+    <footer><span>Mariia Solovei · Curriculum Vitae</span><span>Stand: 2026</span></footer>
+  </div>
 </body>
 </html>
